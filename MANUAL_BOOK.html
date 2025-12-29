@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Book - Travel Product Onboarding</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #FF8C00 0%, #FF6B00 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .toc {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #FF8C00;
+        }
+        
+        .toc h2 {
+            color: #FF8C00;
+            margin-bottom: 15px;
+        }
+        
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .toc li {
+            padding: 8px 0;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .toc li:last-child {
+            border-bottom: none;
+        }
+        
+        .toc a {
+            color: #333;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+        
+        .toc a:hover {
+            color: #FF8C00;
+        }
+        
+        section {
+            margin-bottom: 40px;
+            padding: 25px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        section h2 {
+            color: #FF8C00;
+            font-size: 2em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #FF8C00;
+        }
+        
+        section h3 {
+            color: #333;
+            font-size: 1.5em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        
+        section h4 {
+            color: #555;
+            font-size: 1.2em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        .highlight {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #FF8C00;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning {
+            background-color: #f8d7da;
+            padding: 15px;
+            border-left: 4px solid #dc3545;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .info {
+            background-color: #d1ecf1;
+            padding: 15px;
+            border-left: 4px solid #0dcaf0;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .step {
+            background-color: #e7f3ff;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            border-left: 4px solid #0d6efd;
+        }
+        
+        .step-number {
+            display: inline-block;
+            background-color: #0d6efd;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        table th, table td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #dee2e6;
+        }
+        
+        table th {
+            background-color: #FF8C00;
+            color: white;
+        }
+        
+        table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .icon {
+            display: inline-block;
+            margin-right: 8px;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #FF8C00;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            text-decoration: none;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+        }
+        
+        .back-to-top:hover {
+            transform: translateY(-5px);
+        }
+        
+        @media print {
+            .back-to-top {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📘 Manual Book</h1>
+            <p>Travel Product Onboarding System</p>
+            <p style="font-size: 1em; margin-top: 10px;">Panduan Lengkap untuk Pengguna</p>
+        </header>
+        
+        <div class="toc">
+            <h2>📑 Daftar Isi</h2>
+            <ul>
+                <li><a href="#pengenalan">1. Pengenalan Program</a></li>
+                <li><a href="#konsep">2. Memahami Konsep DRAFT dan RESULT</a></li>
+                <li><a href="#langkah">3. Langkah-Langkah Penggunaan</a></li>
+                <li><a href="#section">4. Penjelasan Setiap Section</a></li>
+            </ul>
+        </div>
+        
+        <section id="pengenalan">
+            <h2>1. Pengenalan Program</h2>
+            
+            <h3>Apa itu Travel Product Onboarding?</h3>
+            <p>
+                Travel Product Onboarding adalah sistem yang dirancang khusus untuk membantu Anda mengelola data produk travel insurance dengan mudah dan efisien. Sistem ini memungkinkan Anda untuk:
+            </p>
+            <ul>
+                <li>Mengelola data produk asuransi travel</li>
+                <li>Mengatur region (wilayah) dan negara</li>
+                <li>Mengelola aturan produk dan komisi</li>
+                <li>Mengatur template dan addon (tambahan) produk</li>
+                <li>Melacak riwayat perubahan data</li>
+            </ul>
+            
+            <h3>Fitur Utama Sistem</h3>
+            <div class="info">
+                <strong>✨ Fitur Unggulan:</strong>
+                <ul>
+                    <li><strong>Draft System:</strong> Simpan data sementara sebelum menyimpan ke database</li>
+                    <li><strong>Excel Upload:</strong> Unggah data dalam jumlah banyak sekaligus</li>
+                    <li><strong>Excel Template:</strong> Download template untuk memudahkan input data</li>
+                    <li><strong>Filter & Search:</strong> Cari dan filter data dengan mudah</li>
+                    <li><strong>Edit & Update:</strong> Ubah data yang sudah tersimpan</li>
+                    <li><strong>History Tracking:</strong> Lihat riwayat perubahan data</li>
+                </ul>
+            </div>
+            
+            <h3>Siapa yang Bisa Menggunakan Sistem Ini?</h3>
+            <p>
+                Sistem ini dirancang untuk semua pengguna, baik yang sudah berpengalaman maupun pemula. 
+                Interface yang sederhana dan intuitif memudahkan siapa saja untuk menggunakan sistem ini tanpa perlu pelatihan khusus.
+            </p>
+        </section>
+        
+        <section id="konsep">
+            <h2>2. Memahami Konsep DRAFT dan RESULT</h2>
+            
+            <h3>Apa itu DRAFT?</h3>
+            <div class="highlight">
+                <p>
+                    <strong>DRAFT</strong> adalah data sementara yang Anda buat atau edit, tetapi belum disimpan ke database. 
+                    Data DRAFT hanya tersimpan di memori browser Anda dan akan hilang jika Anda menutup halaman tanpa menyimpannya.
+                </p>
+            </div>
+            
+            <p><strong>Karakteristik DRAFT:</strong></p>
+            <ul>
+                <li>✅ Data tersimpan sementara di browser</li>
+                <li>✅ Bisa di-edit atau dihapus kapan saja</li>
+                <li>✅ Belum tersimpan ke database</li>
+                <li>⚠️ Akan hilang jika browser ditutup tanpa konfirmasi</li>
+                <li>📝 Biasanya digunakan untuk menyiapkan data sebelum disimpan permanen</li>
+            </ul>
+            
+            <h3>Apa itu RESULT?</h3>
+            <div class="info">
+                <p>
+                    <strong>RESULT</strong> adalah data yang sudah tersimpan di database. 
+                    Data ini permanen dan bisa dilihat, di-edit, atau dihapus kapan saja.
+                </p>
+            </div>
+            
+            <p><strong>Karakteristik RESULT:</strong></p>
+            <ul>
+                <li>💾 Data tersimpan permanen di database</li>
+                <li>✅ Bisa dilihat, di-edit, atau dihapus</li>
+                <li>🔄 Perubahan langsung tersimpan ke database</li>
+                <li>📊 Data ini yang digunakan oleh sistem lain</li>
+                <li>🔍 Bisa difilter dan dicari</li>
+            </ul>
+            
+            <h3>Kapan Menggunakan DRAFT vs RESULT?</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Kegiatan</th>
+                        <th>Gunakan DRAFT</th>
+                        <th>Gunakan RESULT</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Membuat data baru</td>
+                        <td>✅ Ya - untuk persiapan</td>
+                        <td>✅ Ya - setelah konfirmasi</td>
+                    </tr>
+                    <tr>
+                        <td>Mengedit data</td>
+                        <td>✅ Ya - untuk data baru</td>
+                        <td>✅ Ya - untuk data yang sudah ada</td>
+                    </tr>
+                    <tr>
+                        <td>Menghapus data</td>
+                        <td>✅ Ya - sebelum konfirmasi</td>
+                        <td>✅ Ya - langsung dari database</td>
+                    </tr>
+                    <tr>
+                        <td>Melihat data</td>
+                        <td>✅ Ya - preview</td>
+                        <td>✅ Ya - data final</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="warning">
+                <strong>⚠️ Peringatan Penting:</strong>
+                <p>
+                    Pastikan Anda mengkonfirmasi data DRAFT sebelum menutup halaman, 
+                    karena data DRAFT yang belum dikonfirmasi akan hilang.
+                </p>
+            </div>
+        </section>
+        
+        <section id="langkah">
+            <h2>3. Langkah-Langkah Penggunaan</h2>
+            
+            <h3>Langkah 1: Pilih Insurance Code</h3>
+            <div class="step">
+                <span class="step-number">1</span>
+                <strong>Pilih Insurance Code dari dropdown di bagian atas halaman</strong>
+                <p>Insurance Code adalah kode perusahaan asuransi yang akan Anda kelola datanya. 
+                Pilih dari dropdown "List Asuransi" sebelum mulai bekerja dengan data.</p>
+            </div>
+            
+            <h3>Langkah 2: Pilih Section yang Ingin Dikelola</h3>
+            <div class="step">
+                <span class="step-number">2</span>
+                <strong>Scroll ke bawah dan pilih section yang ingin Anda kelola</strong>
+                <p>Ada 7 section utama yang bisa Anda kelola:</p>
+                <ul>
+                    <li>Insurance - Data perusahaan asuransi</li>
+                    <li>Regions - Data wilayah dan negara</li>
+                    <li>Products - Data produk asuransi</li>
+                    <li>Product Rules - Aturan produk</li>
+                    <li>Templates - Template produk</li>
+                    <li>Commissions - Data komisi</li>
+                    <li>Addons - Data addon (tambahan) produk</li>
+                </ul>
+            </div>
+            
+            <h3>Langkah 3: Input Data Baru</h3>
+            <div class="step">
+                <span class="step-number">3</span>
+                <strong>Isi form dengan data yang diperlukan</strong>
+                <p>Setiap section memiliki form input yang berbeda. Isi semua field yang wajib (ditandai dengan tanda *).</p>
+            </div>
+            
+            <h4>Opsi Input Data:</h4>
+            <ul>
+                <li><strong>Input Manual:</strong> Isi form satu per satu</li>
+                <li><strong>Upload Excel:</strong> Klik tombol "Upload Excel" untuk mengunggah banyak data sekaligus</li>
+                <li><strong>Download Template:</strong> Klik "Download Template Excel" untuk mendapatkan format Excel yang benar</li>
+            </ul>
+            
+            <h3>Langkah 4: Simpan sebagai DRAFT</h3>
+            <div class="step">
+                <span class="step-number">4</span>
+                <strong>Klik tombol "Save Draft" atau "Tambah" untuk menyimpan sebagai DRAFT</strong>
+                <p>Data akan tersimpan sebagai DRAFT dan bisa Anda lihat di bagian "Draft Data". 
+                Anda bisa mengedit atau menghapus data DRAFT sebelum mengkonfirmasinya.</p>
+            </div>
+            
+            <h3>Langkah 5: Review Data DRAFT</h3>
+            <div class="step">
+                <span class="step-number">5</span>
+                <strong>Klik "Tampilkan Draft Data" untuk melihat semua data DRAFT</strong>
+                <p>Periksa kembali data yang sudah Anda input. Pastikan semua data sudah benar sebelum dikonfirmasi.</p>
+            </div>
+            
+            <h3>Langkah 6: Konfirmasi Data ke Database</h3>
+            <div class="step">
+                <span class="step-number">6</span>
+                <strong>Klik tombol "Konfirmasi Data (DB)" untuk menyimpan ke database</strong>
+                <p>Setelah dikonfirmasi, data akan tersimpan permanen di database dan tidak bisa dihapus dengan mudah.</p>
+            </div>
+            
+            <div class="warning">
+                <strong>⚠️ Perhatian:</strong>
+                <p>Setelah data dikonfirmasi ke database, data tersebut akan menjadi data RESULT dan akan digunakan oleh sistem lain. 
+                Pastikan data sudah benar sebelum mengkonfirmasi.</p>
+            </div>
+            
+            <h3>Langkah 7: Melihat Data RESULT</h3>
+            <div class="step">
+                <span class="step-number">7</span>
+                <strong>Klik tombol "RESULT" untuk melihat data yang sudah tersimpan di database</strong>
+                <p>Di sini Anda bisa melihat, mengedit, atau memfilter data yang sudah tersimpan permanen.</p>
+            </div>
+            
+            <h3>Langkah 8: Edit atau Hapus Data</h3>
+            <div class="step">
+                <span class="step-number">8</span>
+                <strong>Klik tombol "Edit" untuk mengubah data atau "Delete" untuk menghapus</strong>
+                <p>Untuk data DRAFT, perubahan langsung tersimpan. 
+                Untuk data RESULT, perubahan langsung tersimpan ke database.</p>
+            </div>
+        </section>
+        
+        <section id="section">
+            <h2>4. Penjelasan Setiap Section</h2>
+            
+            <h3>1. Insurance Section</h3>
+            <p><strong>Fungsi:</strong> Mengelola data perusahaan asuransi</p>
+            <p><strong>Field Utama:</strong></p>
+            <ul>
+                <li><strong>Code:</strong> Kode unik perusahaan asuransi</li>
+                <li><strong>Name:</strong> Nama perusahaan asuransi</li>
+                <li><strong>Is Active:</strong> Status aktif/tidak aktif</li>
+            </ul>
+            <p><strong>Cara Menggunakan:</strong></p>
+            <ol>
+                <li>Isi form dengan data perusahaan asuransi</li>
+                <li>Klik "Tambah" untuk menyimpan sebagai DRAFT</li>
+                <li>Klik "Tampilkan Draft Data" untuk melihat DRAFT</li>
+                <li>Klik "Konfirmasi Data (DB)" untuk menyimpan ke database</li>
+            </ol>
+            
+            <h3>2. Regions Section</h3>
+            <p><strong>Fungsi:</strong> Mengelola data wilayah dan negara</p>
+            <p><strong>Field Utama:</strong></p>
+            <ul>
+                <li><strong>Name:</strong> Nama wilayah (contoh: DAMAI WORLDWIDE)</li>
+                <li><strong>Type:</strong> Tipe wilayah (WHITELIST/BLACKLIST)</li>
+                <li><strong>Country IDs:</strong> Daftar ID negara yang termasuk dalam wilayah</li>
+            </ul>
+            <p><strong>Fitur Khusus:</strong></p>
+            <ul>
+                <li>Tombol "Select Countries" untuk memilih negara dari daftar lengkap</li>
+                <li>Fitur "Exclude Countries" untuk mengecualikan negara dari wilayah lain</li>
+            </ul>
+            <p><strong>Cara Menggunakan:</strong></p>
+            <ol>
+                <li>Isi nama dan tipe wilayah</li>
+                <li>Klik "Select Countries" untuk memilih negara</li>
+                <li>Pilih negara yang diinginkan dari modal yang muncul</li>
+                <li>Klik "Confirm" untuk menyimpan pilihan</li>
+                <li>Klik "Tambah" untuk menyimpan sebagai DRAFT</li>
+                <li>Konfirmasi ke database jika sudah benar</li>
+            </ol>
+            
+            <h3>3. Products Section</h3>
+            <p><strong>Fungsi:</strong> Mengelola data produk asuransi travel</p>
+            <p><strong>Field Utama:</strong></p>
+            <ul>
+                <li><strong>Product Name:</strong> Nama produk</li>
+                <li><strong>Type:</strong> Tipe produk (INDIVIDUAL/COUPLE/FAMILY)</li>
+                <li><strong>Region ID:</strong> Wilayah produk</li>
+                <li><strong>Min/Max Adult/Child:</strong> Batas jumlah peserta</li>
+                <li><strong>Summary:</strong> Ringkasan produk</li>
+                <li><strong>Insurance Detail:</strong> Detail asuransi</li>
+                <li><strong>Addons:</strong> Tambahan produk (opsional)</li>
+            </ul>
+            <p><strong>Fitur Khusus:</strong></p>
+            <ul>
+                <li>Auto-generate Product Code berdasarkan input</li>
+                <li>Tombol "Addons" untuk menambahkan addon ke produk</li>
+                <li>Filter berdasarkan Type dan Region</li>
+            </ul>
+            <p><strong>Cara Menggunakan:</strong></p>
+            <ol>
+                <li>Pastikan sudah memilih Insurance Code</li>
+                <li>Isi semua field wajib (bertanda *)</li>
+                <li>Klik "Addons" jika ingin menambahkan addon</li>
+                <li>Klik "Tambah" untuk menyimpan sebagai DRAFT</li>
+                <li>Review dan konfirmasi ke database</li>
+            </ol>
+            
+            <h3>4. Product Rules Section</h3>
+            <p><strong>Fungsi:</strong> Mengelola aturan produk (premium, durasi, dll)</p>
+            <p><strong>Field Utama:</strong></p>
+            <ul>
+                <li><strong>Product Code:</strong> Kode produk</li>
+                <li><strong>Premium Type:</strong> Tipe premium (DAILY/ANNUAL/PER_EXTRA_SEVEN_DAYS)</li>
+                <li><strong>Start Days / End Days:</strong> Rentang hari</li>
+                <li><strong>Base Premium Value:</strong> Nilai premium dasar</li>
+                <li><strong>Rules:</strong> Aturan khusus (JSON format)</li>
+            </ul>
+            <p><strong>Cara Menggunakan:</strong></p>
+            <ol>
+                <li>Pilih Product Code dari dropdown</li>
+                <li>Isi field premium type dan durasi</li>
+                <li>Isi nilai premium</li>
+                <li>Simpan sebagai DRAFT atau langsung ke database</li>
+            </ol>
+            
+            <h3>5. Templates Section</h3>
+            <p><strong>Fungsi:</strong> Mengelola template HTML untuk produk</p>
+            <p><strong>Field Utama:</strong></p>
+            <ul>
+                <li><strong>Product Code:</strong> Kode produk</li>
+                <li><strong>Template HTML:</strong> Kode HTML template</li>
+            </ul>
+            <p><strong>Fitur Khusus:</strong></p>
+            <ul>
+                <li>Editor HTML untuk mengedit template</li>
+                <li>Preview template sebelum menyimpan</li>
+            </ul>
+            
+            <h3>6. Commissions Section</h3>
+            <p><strong>Fungsi:</strong> Mengelola data komisi untuk produk</p>
+            <p><strong>Field Utama:</strong></p>
+            <ul>
+                <li><strong>Product Code:</strong> Kode produk</li>
+                <li><strong>Commission Type:</strong> Tipe komisi</li>
+                <li><strong>Commission Value:</strong> Nilai komisi</li>
+            </ul>
+            <p><strong>Cara Menggunakan:</strong></p>
+            <ol>
+                <li>Pilih Product Code</li>
+                <li>Isi tipe dan nilai komisi</li>
+                <li>Simpan sebagai DRAFT atau langsung ke database</li>
+            </ol>
+            
+            <h3>7. Addons Section</h3>
+            <p><strong>Fungsi:</strong> Mengelola detail aturan addon (tambahan) produk</p>
+            <p><strong>Field Utama:</strong></p>
+            <ul>
+                <li><strong>Addon Rule ID:</strong> ID aturan addon</li>
+                <li><strong>Start/End Condition:</strong> Kondisi mulai dan akhir</li>
+                <li><strong>Value Type:</strong> Tipe nilai (FIXED/PERCENTAGE)</li>
+                <li><strong>Value:</strong> Nilai addon</li>
+                <li><strong>Duration Rule Type:</strong> Tipe durasi aturan</li>
+                <li><strong>Min/Max Adult & Max Age:</strong> Batas usia dan jumlah</li>
+            </ul>
+            <p><strong>Fitur Khusus:</strong></p>
+            <ul>
+                <li>Upload Excel untuk input banyak data sekaligus</li>
+                <li>Download template Excel</li>
+                <li>Filter berdasarkan Addon Name dan Product Name</li>
+            </ul>
+            <p><strong>Cara Menggunakan:</strong></p>
+            <ol>
+                <li><strong>Input Manual:</strong> Isi form dan klik "Tambah"</li>
+                <li><strong>Upload Excel:</strong> 
+                    <ul>
+                        <li>Klik "Download Template Excel" untuk mendapatkan format</li>
+                        <li>Isi template dengan data Anda</li>
+                        <li>Klik "Upload Excel" dan pilih file</li>
+                        <li>Data akan masuk ke DRAFT</li>
+                    </ul>
+                </li>
+                <li>Review data DRAFT</li>
+                <li>Konfirmasi ke database</li>
+            </ol>
+            
+            <h3>8. Histories Section</h3>
+            <p><strong>Fungsi:</strong> Melihat riwayat perubahan data</p>
+            <p><strong>Informasi yang Ditampilkan:</strong></p>
+            <ul>
+                <li>Tanggal dan waktu perubahan</li>
+                <li>User yang melakukan perubahan</li>
+                <li>Tipe perubahan (CREATE/UPDATE/DELETE)</li>
+                <li>Data sebelum dan sesudah perubahan</li>
+            </ul>
+            <p><strong>Cara Menggunakan:</strong></p>
+            <ol>
+                <li>Klik "RESULT" untuk melihat riwayat</li>
+                <li>Data akan ditampilkan dalam tabel</li>
+                <li>Gunakan filter jika perlu</li>
+            </ol>
+        </section>
+        
+        <section>
+            <h2>Tips & Trik</h2>
+            
+            <h3>Tips Umum</h3>
+            <ul>
+                <li>✅ Selalu pilih Insurance Code sebelum mulai bekerja</li>
+                <li>✅ Gunakan DRAFT untuk menyiapkan data sebelum menyimpan permanen</li>
+                <li>✅ Review data DRAFT sebelum mengkonfirmasi</li>
+                <li>✅ Gunakan Excel upload untuk input data dalam jumlah banyak</li>
+                <li>✅ Download template Excel untuk memastikan format benar</li>
+                <li>✅ Gunakan filter untuk mencari data dengan cepat</li>
+            </ul>
+            
+            <h3>Tips Upload Excel</h3>
+            <div class="info">
+                <ul>
+                    <li>Pastikan format Excel sesuai dengan template</li>
+                    <li>Jangan mengubah header (baris pertama) pada template</li>
+                    <li>Isi semua field wajib</li>
+                    <li>Pastikan tipe data sesuai (angka untuk angka, teks untuk teks)</li>
+                    <li>Hapus baris kosong sebelum upload</li>
+                </ul>
+            </div>
+            
+            <h3>Tips Edit Data</h3>
+            <ul>
+                <li>Untuk data DRAFT: Edit langsung dari tabel DRAFT</li>
+                <li>Untuk data RESULT: Klik tombol "Edit" di tabel RESULT</li>
+                <li>Perubahan data RESULT langsung tersimpan ke database</li>
+                <li>Gunakan tombol "Cancel" untuk membatalkan edit</li>
+            </ul>
+            
+            <h3>Tips Filter Data</h3>
+            <ul>
+                <li>Gunakan filter dropdown untuk menyaring data</li>
+                <li>Klik "Clear Filter" untuk menghapus semua filter</li>
+                <li>Filter hanya berlaku untuk data RESULT</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Pertanyaan yang Sering Diajukan (FAQ)</h2>
+            
+            <h3>Q: Apa yang terjadi jika saya menutup browser sebelum mengkonfirmasi DRAFT?</h3>
+            <p><strong>A:</strong> Data DRAFT akan hilang. Pastikan Anda mengkonfirmasi data DRAFT sebelum menutup browser.</p>
+            
+            <h3>Q: Bisakah saya mengedit data yang sudah dikonfirmasi ke database?</h3>
+            <p><strong>A:</strong> Ya, Anda bisa mengedit data RESULT dengan klik tombol "Edit" di tabel RESULT.</p>
+            
+            <h3>Q: Bagaimana cara menghapus data yang sudah dikonfirmasi?</h3>
+            <p><strong>A:</strong> Untuk data RESULT, klik tombol "Delete" di tabel RESULT. 
+            Perhatian: Hapus data dengan hati-hati karena akan langsung terhapus dari database.</p>
+            
+            <h3>Q: Format Excel seperti apa yang harus saya gunakan?</h3>
+            <p><strong>A:</strong> Download template Excel dari setiap section untuk mendapatkan format yang benar. 
+            Jangan mengubah header atau format template.</p>
+            
+            <h3>Q: Apa perbedaan antara DRAFT dan RESULT?</h3>
+            <p><strong>A:</strong> DRAFT adalah data sementara yang belum tersimpan ke database. 
+            RESULT adalah data yang sudah tersimpan permanen di database.</p>
+            
+            <h3>Q: Bagaimana cara melihat data yang sudah saya input?</h3>
+            <p><strong>A:</strong> Klik "Tampilkan Draft Data" untuk melihat DRAFT, atau klik "RESULT" untuk melihat data di database.</p>
+        </section>
+        
+        <section>
+            <h2>Kesimpulan</h2>
+            <p>
+                Sistem Travel Product Onboarding dirancang untuk memudahkan Anda dalam mengelola data produk asuransi travel. 
+                Dengan memahami konsep DRAFT dan RESULT, serta mengikuti langkah-langkah yang telah dijelaskan, 
+                Anda akan dapat menggunakan sistem ini dengan mudah dan efisien.
+            </p>
+            <div class="highlight">
+                <p><strong>Ingat:</strong> Selalu review data DRAFT sebelum mengkonfirmasi ke database, 
+                karena data yang sudah dikonfirmasi akan langsung tersimpan permanen.</p>
+            </div>
+            <p>
+                Jika Anda mengalami kesulitan atau memiliki pertanyaan, jangan ragu untuk menghubungi tim support.
+            </p>
+        </section>
+    </div>
+    
+    <a href="#" class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">↑</a>
+    
+    <script>
+        // Smooth scroll untuk anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+

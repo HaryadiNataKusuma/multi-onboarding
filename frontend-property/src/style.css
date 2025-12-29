@@ -1,0 +1,1264 @@
+/* style-orange.css (Full Script - Orange Theme) */
+
+/* Definisi Warna Dasar */
+:root {
+    --primary-orange: #FF8C00;
+    --primary-orange-dark: #e67e00;
+    --primary-color: var(--primary-orange);
+    --secondary-color: #525f7f; /* Ungu/Abu-abu gelap untuk kontras */
+    --background-light: #f0f8ff;
+    --card-background: #ffffff;
+}
+
+
+/* ========================================================= */
+/* --- 1. GENERAL RESET & LAYOUT --- */
+/* ========================================================= */
+
+/* Custom Addon Dropdown Styling */
+#addon-rules-addon-code {
+    background-color: #fff;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#addon-rules-addon-code:hover {
+    border-color: var(--primary-orange);
+    box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.1);
+}
+
+#addon-rules-addon-code:focus {
+    border-color: var(--primary-orange);
+    box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.2);
+    outline: none;
+}
+
+#addon-rules-addon-code option {
+    padding: 8px 12px;
+    font-size: 14px;
+    background-color: #fff;
+    color: #333;
+}
+
+#addon-rules-addon-code option:hover {
+    background-color: var(--primary-orange);
+    color: #fff;
+}
+
+/* Addon dropdown label styling */
+label[for="addon-rules-addon-code"] {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Addon dropdown container */
+.addon-dropdown-container {
+    position: relative;
+}
+
+.addon-dropdown {
+    width: 100%;
+    background-color: #fff;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    min-height: 48px;
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: ellipsis;
+}
+
+.addon-dropdown:hover {
+    border-color: var(--primary-orange);
+    box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.1);
+}
+
+.addon-dropdown:focus {
+    border-color: var(--primary-orange);
+    box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.2);
+    outline: none;
+}
+
+.addon-dropdown option {
+    padding: 8px 12px;
+    font-size: 14px;
+    background-color: #fff;
+    color: #333;
+    white-space: normal;
+    word-wrap: break-word;
+    max-width: 100%;
+}
+
+.addon-dropdown option:hover {
+    background-color: var(--primary-orange);
+    color: #fff;
+}
+
+/* Addon info display */
+.addon-info {
+    margin-top: 8px;
+    padding: 8px 12px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    border-left: 3px solid var(--primary-orange);
+    font-size: 12px;
+    color: #666;
+    transition: all 0.3s ease;
+}
+
+.addon-info.show {
+    display: block !important;
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Insurance Product Code Dropdown Styling */
+#prod-insurance-product-code, #edit-prod-insurance-product-code {
+    background-color: #fff;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    min-height: 48px;
+}
+
+#prod-insurance-product-code:hover, #edit-prod-insurance-product-code:hover {
+    border-color: var(--primary-orange);
+    box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.1);
+}
+
+#prod-insurance-product-code:focus, #edit-prod-insurance-product-code:focus {
+    border-color: var(--primary-orange);
+    box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.2);
+    outline: none;
+}
+
+#prod-insurance-product-code option, #edit-prod-insurance-product-code option {
+    padding: 8px 12px;
+    font-size: 14px;
+    background-color: #fff;
+    color: #333;
+}
+
+#prod-insurance-product-code option:hover, #edit-prod-insurance-product-code option:hover {
+    background-color: var(--primary-orange);
+    color: #fff;
+}
+
+/* Hide old edit form - but allow edit-rules-form to show */
+.edit-form:not(#edit-rules-form) {
+    display: none !important;
+}
+
+/* Allow edit-rules-form to be shown when needed */
+#edit-rules-form {
+    display: none;
+}
+
+#edit-rules-form.show {
+    display: block !important;
+}
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: var(--background-light); 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+}
+
+#wrapper {
+    display: flex;
+    width: 100%;
+}
+
+#page-content-wrapper {
+    flex: 1;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+.main-content-area {
+    background-color: var(--background-light); 
+    min-height: calc(100vh - 76px); 
+    padding: 1rem !important;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/* ========================================================= */
+/* --- 2. SIDEBAR (Menu Kiri) - ORANGE THEME --- */
+/* ========================================================= */
+#sidebar-wrapper {
+    min-height: 100vh;
+    width: 15rem;
+    /* Ganti gradient ungu/biru ke solid Orange */
+    background-color: var(--primary-orange) !important; 
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Sidebar Heading (Logo/Title Area) */
+.sidebar-heading {
+    background-color: var(--primary-orange-dark) !important; /* Shade yang lebih gelap */
+    color: white;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Sidebar Menu Items */
+#sidebar-wrapper .list-group-item {
+    color: #fff; /* Teks putih */
+    border: none;
+    padding: 12px 18px;
+    font-size: 0.85rem;
+    background-color: transparent !important;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+/* Sidebar Item Active */
+#sidebar-wrapper .list-group-item.active {
+    background-color: rgba(0, 0, 0, 0.2) !important; /* Semi-transparan gelap sebagai highlight */
+    color: white !important;
+    border-left: 5px solid #fff; /* Garis putih sebagai penanda aktif */
+    padding-left: 15px;
+    border-radius: 0;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* Progress indicator for sidebar items */
+#sidebar-wrapper .list-group-item.active::after {
+    content: '';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+#sidebar-wrapper .list-group-item:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Hover semi-transparan lebih ringan */
+    color: white;
+}
+
+/* Sub Menu Styling */
+.submenu {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+}
+.submenu-item {
+    padding-left: 2.5rem !important;
+    color: #e9ecef !important;
+}
+.submenu-item.active {
+    background-color: rgba(0, 0, 0, 0.25) !important;
+    border-left: 5px solid #fff;
+    font-weight: 600;
+}
+.submenu-item:hover {
+    background-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+.menu-toggle i {
+    color: #fff;
+}
+
+
+/* ========================================================= */
+/* --- 3. NAVBAR/HEADER ATAS --- */
+/* ========================================================= */
+.navbar {
+    background-color: white !important;
+    padding: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border-bottom: 3px solid var(--primary-color) !important; /* Garis Oranye di bawah Navbar */
+    width: 100%;
+}
+
+.navbar .container-fluid {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+
+/* ========================================================= */
+/* --- 4. FORM & TABLE CONTAINERS --- */
+/* ========================================================= */
+.form-section,
+.table-section {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    margin-left: 0;
+    margin-right: 0;
+    
+    background-color: var(--card-background); /* Kembali ke putih solid */
+    border-radius: 0.75rem; 
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); 
+    border: 1px solid #e9ecef; /* Border tipis untuk definisi */
+    position: relative;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: visible;
+    box-sizing: border-box;
+}
+
+/* Section Indicators - Different colors for each part */
+.form-section:nth-of-type(1),
+.table-section:nth-of-type(1) {
+    border-left: 5px solid #28a745; /* Green for Insurances */
+    box-shadow: 0 0.5rem 1rem rgba(40, 167, 69, 0.15);
+}
+
+.form-section:nth-of-type(2),
+.table-section:nth-of-type(2) {
+    border-left: 5px solid #007bff; /* Blue for Products */
+    box-shadow: 0 0.5rem 1rem rgba(0, 123, 255, 0.15);
+}
+
+.form-section:nth-of-type(3),
+.table-section:nth-of-type(3) {
+    border-left: 5px solid #ffc107; /* Yellow for Rules */
+    box-shadow: 0 0.5rem 1rem rgba(255, 193, 7, 0.15);
+}
+
+.form-section:nth-of-type(4),
+.table-section:nth-of-type(4) {
+    border-left: 5px solid #dc3545; /* Red for Templates */
+    box-shadow: 0 0.5rem 1rem rgba(220, 53, 69, 0.15);
+}
+
+.form-section:nth-of-type(5),
+.table-section:nth-of-type(5) {
+    border-left: 5px solid #6f42c1; /* Purple for Addons */
+    box-shadow: 0 0.5rem 1rem rgba(111, 66, 193, 0.15);
+}
+
+.form-section:nth-of-type(6),
+.table-section:nth-of-type(6) {
+    border-left: 5px solid #20c997; /* Teal for Addon Rules */
+    box-shadow: 0 0.5rem 1rem rgba(32, 201, 151, 0.15);
+}
+
+.form-section:nth-of-type(7),
+.table-section:nth-of-type(7) {
+    border-left: 5px solid #fd7e14; /* Orange for Addon Mappings */
+    box-shadow: 0 0.5rem 1rem rgba(253, 126, 20, 0.15);
+}
+
+.form-section:nth-of-type(8),
+.table-section:nth-of-type(8) {
+    border-left: 5px solid #e83e8c; /* Pink for Insurance Own Risks */
+    box-shadow: 0 0.5rem 1rem rgba(232, 62, 140, 0.15);
+}
+
+.form-section:nth-of-type(9),
+.table-section:nth-of-type(9) {
+    border-left: 5px solid #6610f2; /* Indigo for Insurance Clauses */
+    box-shadow: 0 0.5rem 1rem rgba(102, 16, 242, 0.15);
+}
+
+/* Hover effect for sections */
+.form-section:hover,
+.table-section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.15);
+}
+
+/* Spacing khusus untuk layout vertikal */
+.col-12 .form-section:first-child {
+    margin-top: 0;
+}
+
+.col-12 .table-section:last-child {
+    margin-bottom: 0;
+}
+
+/* Header Form Section */
+.form-section h3 {
+    color: var(--secondary-color);
+    font-size: 1rem;
+    font-weight: 600;
+    position: relative;
+    padding: 10px 15px;
+    margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 0.75rem 0.75rem 0 0;
+    border-bottom: 2px solid #dee2e6;
+}
+
+/* Section Labels with colored indicators */
+.form-section h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+}
+
+/* Specific colors for each section */
+.form-section:nth-of-type(1) h3::before {
+    background-color: #28a745; /* Green for Insurances */
+}
+
+.form-section:nth-of-type(2) h3::before {
+    background-color: #007bff; /* Blue for Products */
+}
+
+.form-section:nth-of-type(3) h3::before {
+    background-color: #ffc107; /* Yellow for Rules */
+}
+
+.form-section:nth-of-type(4) h3::before {
+    background-color: #dc3545; /* Red for Templates */
+}
+
+.form-section:nth-of-type(5) h3::before {
+    background-color: #6f42c1; /* Purple for Addons */
+}
+
+.form-section:nth-of-type(6) h3::before {
+    background-color: #20c997; /* Teal for Addon Rules */
+}
+
+.form-section:nth-of-type(7) h3::before {
+    background-color: #fd7e14; /* Orange for Addon Mappings */
+}
+
+.form-section:nth-of-type(8) h3::before {
+    background-color: #e83e8c; /* Pink for Insurance Own Risks */
+}
+
+.form-section:nth-of-type(9) h3::before {
+    background-color: #6610f2; /* Indigo for Insurance Clauses */
+}
+
+/* Table Header Section (Header Data Insurances) */
+.table-section .table-header {
+    /* Gunakan warna secondary yang elegan seperti di gambar referensi */
+    background: linear-gradient(135deg, #525f7f 0%, #6c7a91 100%) !important; 
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+    color: white;
+    box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.15);
+    margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+    border-bottom: none;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.table-header-actions {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Table header indicators */
+.table-section .table-header::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Specific colors for table headers */
+.table-section:nth-of-type(1) .table-header::before {
+    background-color: #28a745; /* Green for Insurances */
+}
+
+.table-section:nth-of-type(2) .table-header::before {
+    background-color: #007bff; /* Blue for Products */
+}
+
+.table-section:nth-of-type(3) .table-header::before {
+    background-color: #ffc107; /* Yellow for Rules */
+}
+
+.table-section:nth-of-type(4) .table-header::before {
+    background-color: #dc3545; /* Red for Templates */
+}
+
+.table-section:nth-of-type(5) .table-header::before {
+    background-color: #6f42c1; /* Purple for Addons */
+}
+
+.table-section:nth-of-type(6) .table-header::before {
+    background-color: #20c997; /* Teal for Addon Rules */
+}
+
+.table-section:nth-of-type(7) .table-header::before {
+    background-color: #fd7e14; /* Orange for Addon Mappings */
+}
+
+.table-section:nth-of-type(8) .table-header::before {
+    background-color: #e83e8c; /* Pink for Insurance Own Risks */
+}
+
+.table-section:nth-of-type(9) .table-header::before {
+    background-color: #6610f2; /* Indigo for Insurance Clauses */
+}
+
+.table-section .table-header h4 {
+    color: white;
+    margin: 0;
+    flex: 1;
+    min-width: 200px;
+}
+
+
+/* ========================================================= */
+/* --- 5. FORM INPUT & BUTTONS --- */
+/* ========================================================= */
+.form-control, .form-select {
+    border-radius: 0.4rem;
+    height: 40px; 
+    font-size: 12px;
+    box-shadow: none;
+    border-color: #ced4da;
+}
+
+/* Placeholder styling dengan opacity 40% */
+.form-control::placeholder {
+    opacity: 0.4;
+    color: #6c757d;
+}
+
+.form-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #32325d;
+    margin-bottom: 0.3rem;
+}
+
+/* Tombol Primary (Save) - ORANGE */
+.btn-primary {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 8px 16px;
+    border-radius: 0.4rem;
+}
+.btn-primary:hover {
+    background-color: var(--primary-orange-dark) !important;
+    border-color: var(--primary-orange-dark) !important;
+    transform: translateY(-1px);
+}
+
+/* Tombol Outline Primary (Orange Outline) */
+.btn-outline-primary {
+    border-color: var(--primary-color) !important;
+    color: var(--primary-color) !important;
+    background-color: transparent !important;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 8px 16px;
+    border-radius: 0.4rem;
+}
+.btn-outline-primary:hover {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: white !important;
+    transform: translateY(-1px);
+}
+
+/* Tombol Success (Update/Confirm) - Hijau */
+.btn-success {
+    background-color: #2dce89 !important;
+    border-color: #2dce89 !important;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 8px 16px;
+    border-radius: 0.4rem;
+}
+.btn-success:hover {
+    background-color: #26b97a !important;
+    border-color: #26b97a !important;
+    transform: translateY(-1px);
+}
+
+/* Tombol Danger (Hapus) - Merah */
+.btn-danger { 
+    background-color: #f5365c !important;
+    border-color: #f5365c !important;
+    font-size: 12px;
+    padding: 8px 16px;
+}
+.btn-danger:hover {
+    background-color: #ec0c38 !important;
+    border-color: #ec0c38 !important;
+}
+
+/* Tombol Secondary & Warning */
+.btn-secondary, .btn-warning, .btn-info, .btn-light {
+    font-size: 12px;
+    padding: 8px 16px;
+}
+
+/* Tombol Small */
+.btn-sm {
+    font-size: 12px;
+    padding: 6px 12px;
+}
+
+/* ========================================================= */
+/* --- 6. TABLE STYLING & LOGO --- */
+/* ========================================================= */
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    table-layout: auto;
+}
+
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: visible;
+}
+
+.table thead th {
+    font-weight: 700;
+    font-size: 12px;
+    color: #8898aa;
+    background-color: #f6f9fc;
+    white-space: nowrap;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f6f9fc !important;
+}
+
+.table tbody td {
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+/* Highlight baris draft */
+.table-warning {
+    --bs-table-bg-state: #fff3cd; 
+    background-color: #fff3cd;
+}
+
+/* Tampilan Logo Dinamis */
+.table-logo {
+    max-height: 30px;
+    max-width: 100px;
+    object-fit: contain; 
+    vertical-align: middle;
+    border: 1px solid #dee2e6; 
+    padding: 2px 5px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Logo Preview di Form */
+.logo-preview {
+    max-width: 150px;
+    max-height: 150px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 8px;
+    background: #f8f9fa;
+    object-fit: contain;
+    margin-top: 0.5rem;
+}
+
+.form-text {
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    color: #6c757d;
+}
+
+.text-muted {
+    color: #6c757d;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+/* --- Responsive & Fixes --- */
+.form-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.form-grid-2 { grid-template-columns: repeat(2, 1fr); }
+.form-grid-3 { grid-template-columns: repeat(3, 1fr); }
+.form-grid-4 { grid-template-columns: repeat(4, 1fr); }
+.form-grid-3-span { grid-column: span 3; }
+
+@media (max-width: 992px) {
+    .form-grid-4, .form-grid-3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .form-grid-4, .form-grid-3, .form-grid-2 { grid-template-columns: 1fr; }
+}
+
+/* Hidden Columns for Products Table */
+#onboarding-data-table-products th:nth-child(8), /* Summary */
+#onboarding-data-table-products td:nth-child(8),
+#onboarding-data-table-products th:nth-child(9), /* Protection Detail */
+#onboarding-data-table-products td:nth-child(9),
+#onboarding-data-table-products th:nth-child(10), /* How to Claim */
+#onboarding-data-table-products td:nth-child(10) {
+    display: none; 
+}
+
+/* ========================================================= */
+/* --- 7. SCROLL PROGRESS INDICATOR --- */
+/* ========================================================= */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        #28a745 0%, 
+        #007bff 11%, 
+        #ffc107 22%, 
+        #dc3545 33%, 
+        #6f42c1 44%, 
+        #20c997 56%, 
+        #fd7e14 67%, 
+        #e83e8c 78%, 
+        #6610f2 89%, 
+        #17a2b8 100%);
+    z-index: 9999;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+/* ========================================================= */
+/* --- 8. DASHBOARD LAYOUT (Vertical Stack) --- */
+/* ========================================================= */
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.col-12 {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 2rem;
+}
+
+/* Spacing antar section */
+.col-12:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+/* ========================================================= */
+/* --- 9. CONFIRMED DATA SECTIONS STYLING --- */
+/* ========================================================= */
+
+/* Confirmed Section Container */
+.confirmed-section {
+    border-left: 5px solid #28a745 !important; /* Green border for confirmed data */
+    box-shadow: 0 0.5rem 1rem rgba(40, 167, 69, 0.15) !important;
+    background: linear-gradient(135deg, #f8fff9 0%, #ffffff 100%);
+    border-radius: 0.75rem;
+    margin-top: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.confirmed-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #28a745, #20c997, #28a745);
+    background-size: 200% 100%;
+    animation: confirmedShimmer 3s ease-in-out infinite;
+}
+
+@keyframes confirmedShimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+/* Confirmed Section Header */
+.confirmed-section .table-header {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+    border-radius: 0.75rem 0.75rem 0 0;
+    padding: 1rem 1.5rem;
+    margin: 0;
+    border: none;
+}
+
+.confirmed-section .table-header h4 {
+    color: white;
+    font-weight: 700;
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+/* Removed redundant checkmark - only one checkmark in CSS ::after */
+
+/* Confirmed Section Buttons */
+.confirmed-section .btn-outline-success {
+    border-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.confirmed-section .btn-outline-success:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Confirmed Section Table */
+.confirmed-section .table {
+    margin-bottom: 0;
+    background: white;
+}
+
+.confirmed-section .table thead th {
+    background: linear-gradient(135deg, #f8fff9 0%, #e8f5e8 100%);
+    color: #155724;
+    font-weight: 700;
+    border-bottom: 2px solid #28a745;
+    padding: 1rem 0.75rem;
+    font-size: 12px;
+}
+
+.confirmed-section .table tbody tr {
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.confirmed-section .table tbody tr:hover {
+    background: linear-gradient(135deg, #f8fff9 0%, #e8f5e8 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(40, 167, 69, 0.1);
+}
+
+.confirmed-section .table tbody td {
+    padding: 0.75rem;
+    vertical-align: middle;
+    font-size: 12px;
+    border: none;
+}
+
+/* Confirmed Section Badges */
+.confirmed-section .badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.5rem;
+}
+
+.confirmed-section .badge.bg-success {
+    background: linear-gradient(135deg, #28a745, #20c997) !important;
+    color: white;
+    box-shadow: 0 2px 4px rgba(40, 167, 69, 0.3);
+}
+
+.confirmed-section .badge.bg-warning {
+    background: linear-gradient(135deg, #ffc107, #ffb300) !important;
+    color: #212529;
+    box-shadow: 0 2px 4px rgba(255, 193, 7, 0.3);
+}
+
+.confirmed-section .badge.bg-secondary {
+    background: linear-gradient(135deg, #6c757d, #5a6268) !important;
+    color: white;
+    box-shadow: 0 2px 4px rgba(108, 117, 125, 0.3);
+}
+
+/* Confirmed Section Action Buttons */
+.confirmed-section .btn-sm {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.4rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.confirmed-section .btn-outline-primary {
+    border-color: #007bff;
+    color: #007bff;
+    background-color: transparent;
+}
+
+.confirmed-section .btn-outline-primary:hover {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+.confirmed-section .btn-outline-danger {
+    border-color: #dc3545;
+    color: #dc3545;
+    background-color: transparent;
+}
+
+.confirmed-section .btn-outline-danger:hover {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
+
+/* Confirmed Section Images */
+.confirmed-section img {
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.confirmed-section img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Confirmed Section Responsive */
+@media (max-width: 768px) {
+    .confirmed-section .table-header {
+        padding: 0.75rem 1rem;
+    }
+    
+    .confirmed-section .table-header h4 {
+        font-size: 1rem;
+    }
+    
+    .confirmed-section .table thead th,
+    .confirmed-section .table tbody td {
+        padding: 0.5rem 0.25rem;
+        font-size: 0.8rem;
+    }
+    
+    .confirmed-section .btn-sm {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.7rem;
+    }
+}
+
+/* ========================================================= */
+/* --- TABLE CONTENT STYLING --- */
+/* ========================================================= */
+.table-content {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: visible;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table-content .table-responsive {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: visible;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+    display: block;
+}
+
+/* ========================================================= */
+/* --- 10. DRAFT SECTION STYLING --- */
+/* ========================================================= */
+
+/* Draft Section Container */
+.draft-section {
+    border-left: 5px solid #ffc107 !important; /* Yellow border for draft data */
+    box-shadow: 0 0.5rem 1rem rgba(255, 193, 7, 0.15) !important;
+    background: linear-gradient(135deg, #fffbf0 0%, #ffffff 100%);
+    border-radius: 0.75rem;
+    margin-top: 1rem;
+    position: relative;
+    overflow: hidden;
+    display: block; /* Always visible when v-if is true */
+}
+
+.draft-section.show {
+    display: block !important; /* Force show when class show is present */
+}
+
+.draft-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #ffc107, #ffb300, #ffc107);
+    background-size: 200% 100%;
+    animation: draftShimmer 3s ease-in-out infinite;
+}
+
+@keyframes draftShimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+/* Draft Section Header */
+.draft-section .table-header {
+    background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%);
+    color: white;
+    border-radius: 0.75rem 0.75rem 0 0;
+    padding: 1rem 1.5rem;
+    margin: 0;
+    border: none;
+}
+
+.draft-section .table-header h4 {
+    color: white;
+    font-weight: 700;
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+/* Draft Section Status Indicator */
+.draft-section .table-header::after {
+    content: '📝 DRAFT';
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    backdrop-filter: blur(10px);
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Draft Section Animation */
+.draft-section {
+    animation: draftFadeIn 0.6s ease-out;
+}
+
+@keyframes draftFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Draft Section Table */
+.draft-section .table {
+    margin-bottom: 0;
+    background: white;
+}
+
+.draft-section .table thead th {
+    background: linear-gradient(135deg, #fffbf0 0%, #ffeaa7 100%);
+    color: #856404;
+    font-weight: 700;
+    border-bottom: 2px solid #ffc107;
+    padding: 1rem 0.75rem;
+    font-size: 12px;
+}
+
+.draft-section .table tbody tr {
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.draft-section .table tbody tr:hover {
+    background: linear-gradient(135deg, #fffbf0 0%, #ffeaa7 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(255, 193, 7, 0.1);
+}
+
+.draft-section .table tbody td {
+    padding: 0.75rem;
+    vertical-align: middle;
+    font-size: 12px;
+    border: none;
+}
+
+/* Draft Section Action Buttons */
+.draft-section .btn-action {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.4rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin: 0.1rem;
+}
+
+.draft-section .btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #212529;
+}
+
+.draft-section .btn-warning:hover {
+    background-color: #ffb300;
+    border-color: #ffb300;
+    color: #212529;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(255, 193, 7, 0.3);
+}
+
+.draft-section .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: white;
+}
+
+.draft-section .btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
+
+/* Draft Section Badges */
+.draft-section .badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.5rem;
+}
+
+.draft-section .badge.bg-success {
+    background: linear-gradient(135deg, #28a745, #20c997) !important;
+    color: white;
+    box-shadow: 0 2px 4px rgba(40, 167, 69, 0.3);
+}
+
+.draft-section .badge.bg-secondary {
+    background: linear-gradient(135deg, #6c757d, #5a6268) !important;
+    color: white;
+    box-shadow: 0 2px 4px rgba(108, 117, 125, 0.3);
+}
+
+/* Draft Section Responsive */
+@media (max-width: 768px) {
+    .draft-section .table-header {
+        padding: 0.75rem 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .draft-section .table-header h4 {
+        font-size: 1rem;
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    .table-header-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+    
+    .draft-section .table thead th,
+    .draft-section .table tbody td {
+        padding: 0.5rem 0.25rem;
+        font-size: 0.8rem;
+    }
+    
+    .draft-section .btn-action {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.7rem;
+    }
+}
+
+/* ========================================================= */
+/* --- 11. CUSTOM ALERT & CONFIRM MODAL --- */
+/* ========================================================= */
+.custom-alert-backdrop,
+.custom-confirm-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+}
+
+.custom-alert-modal,
+.custom-confirm-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    min-width: 400px;
+    max-width: 90%;
+}
+
+.custom-alert-modal h5,
+.custom-confirm-modal h5 {
+    font-weight: 600;
+}
+
+.custom-alert-modal p,
+.custom-confirm-modal p {
+    color: #525f7f;
+    margin: 0;
+}

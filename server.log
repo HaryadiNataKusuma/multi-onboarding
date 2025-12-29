@@ -1,0 +1,134 @@
+2025/12/18 16:34:11 🔌 Connecting to MySQL database...
+2025/12/18 16:34:11    Host: 127.0.0.1:3306
+2025/12/18 16:34:11    Database: travel_service_development
+2025/12/18 16:34:11    User: root
+2025/12/18 16:34:13 Database connection established successfully
+2025/12/18 16:34:13 ✅ Successfully connected to MySQL database
+2025/12/18 16:34:13 ✅ Database schema initialized
+2025/12/18 16:34:13 🚗 Initializing Vehicle onboarding program...
+2025/12/18 16:34:13 ✈️  Initializing Travel onboarding program...
+2025/12/18 16:34:13 🏠 Initializing Property onboarding program...
+2025/12/18 16:34:13 🏠 Initializing Property onboarding program...
+2025/12/18 16:34:13 🚀 Server starting on :8080
+2025/12/18 16:34:13 ✅ Using Echo v3.3.10
+2025/12/18 16:34:13 
+2025/12/18 16:34:13 📋 Default Program: vehicle (for backward compatibility)
+2025/12/18 16:34:13 📋 Enabled Programs:
+2025/12/18 16:34:13    ✅ Motor Vehicle - Routes: /api/vehicle/*
+2025/12/18 16:34:13    ✅ Travel - Routes: /api/travel/*
+2025/12/18 16:34:13    ✅ Property - Routes: /api/property/*
+2025/12/18 16:34:13 
+2025/12/18 16:34:13 📡 Server is ready! Access at http://localhost:8080
+2025/12/18 16:34:13 📋 Available endpoints:
+2025/12/18 16:34:13    - GET  /api/vehicle/* (default program routes)
+2025/12/18 16:34:13    - GET  /api/vehicle/* (Motor Vehicle program routes)
+2025/12/18 16:34:13    - GET  /api/travel/* (Travel program routes)
+2025/12/18 16:34:13    - GET  /api/property/* (Property program routes)
+2025/12/18 16:34:13 
+2025/12/18 16:34:13 ⏳ Starting HTTP server on port 8080...
+
+   ____    __
+  / __/___/ /  ___
+ / _// __/ _ \/ _ \
+/___/\__/_//_/\___/ v3.3.10-dev
+High performance, minimalist Go web framework
+https://echo.labstack.com
+____________________________________O/_______
+                                    O\
+⇨ http server started on [::]:8080
+{"time":"2025-12-18T16:34:19.579058+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/templates/draft","user_agent":"curl/8.7.1","status":200,"error":"","latency":935895167,"latency_human":"935.895167ms","bytes_in":0,"bytes_out":477}
+✅ GetAll Property insurances: Found 1 insurances
+✅ GetAll Property insurances: Found 1 insurances
+{"time":"2025-12-18T16:35:17.298614+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/insurances","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":2981960792,"latency_human":"2.981960792s","bytes_in":0,"bytes_out":204}
+✅ GetAll Property insurances: Found 1 insurances
+{"time":"2025-12-18T16:35:17.298826+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/insurances","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":704389000,"latency_human":"704.389ms","bytes_in":0,"bytes_out":204}
+{"time":"2025-12-18T16:35:17.298612+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/insurances","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":4759536125,"latency_human":"4.759536125s","bytes_in":0,"bytes_out":204}
+✅ GetAll Property insurances: Found 1 insurances
+{"time":"2025-12-18T16:35:17.323344+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/insurances","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":729559417,"latency_human":"729.559417ms","bytes_in":0,"bytes_out":204}
+DEBUG GetAll: Product ID=26, Code=PR-DAMAI-PAR-SME-01, AdminFee=50000
+DEBUG GetAll: Product ID=26, Code=PR-DAMAI-PAR-SME-01, AdminFee=50000
+{"time":"2025-12-18T16:35:17.49695+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/products","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":902745125,"latency_human":"902.745125ms","bytes_in":0,"bytes_out":700}
+{"time":"2025-12-18T16:35:17.49699+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/products","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":4958614083,"latency_human":"4.958614083s","bytes_in":0,"bytes_out":700}
+DEBUG GetAll: Product ID=26, Code=PR-DAMAI-PAR-SME-01, AdminFee=50000
+{"time":"2025-12-18T16:35:17.523259+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/products","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":926692417,"latency_human":"926.692417ms","bytes_in":0,"bytes_out":700}
+DEBUG GetAll: Product ID=26, Code=PR-DAMAI-PAR-SME-01, AdminFee=50000
+{"time":"2025-12-18T16:35:21.610646+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/products?insurance_code=DAMAI","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":130931709,"latency_human":"130.931709ms","bytes_in":0,"bytes_out":700}
+DEBUG GetAll: Product ID=26, Code=PR-DAMAI-PAR-SME-01, AdminFee=50000
+{"time":"2025-12-18T16:35:21.657108+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/products?insurance_code=DAMAI","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":43999291,"latency_human":"43.999291ms","bytes_in":0,"bytes_out":700}
+DEBUG GetAll: Product ID=26, Code=PR-DAMAI-PAR-SME-01, AdminFee=50000
+{"time":"2025-12-18T16:35:46.805813+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/products?insurance_code=DAMAI","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":54654750,"latency_human":"54.65475ms","bytes_in":0,"bytes_out":700}
+{"time":"2025-12-18T16:35:46.849233+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/templates/draft?insurance_code=DAMAI","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":39587375,"latency_human":"39.587375ms","bytes_in":0,"bytes_out":477}
+{"time":"2025-12-18T16:36:02.690638+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"POST","uri":"/api/property/templates/draft/clear","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":204,"error":"","latency":59244916,"latency_human":"59.244916ms","bytes_in":0,"bytes_out":0}
+DEBUG GetAll: Product ID=26, Code=PR-DAMAI-PAR-SME-01, AdminFee=50000
+{"time":"2025-12-18T16:36:04.430113+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/products?insurance_code=DAMAI","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":25715791,"latency_human":"25.715791ms","bytes_in":0,"bytes_out":700}
+{"time":"2025-12-18T16:36:04.434302+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/templates/draft?insurance_code=DAMAI","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":1494291,"latency_human":"1.494291ms","bytes_in":0,"bytes_out":3}
+DEBUG GetAll: Product ID=26, Code=PR-DAMAI-PAR-SME-01, AdminFee=50000
+{"time":"2025-12-18T16:36:06.235177+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/products?insurance_code=DAMAI","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":11191792,"latency_human":"11.191792ms","bytes_in":0,"bytes_out":700}
+{"time":"2025-12-18T16:36:11.062331+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"OPTIONS","uri":"/api/property/products/generate-templates/selected","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":204,"error":"","latency":12958,"latency_human":"12.958µs","bytes_in":0,"bytes_out":0}
+Success: Generated template drafts for product PR-DAMAI-PAR-SME-01
+Template generation complete: 1 successful, 0 failed out of 1 products
+{"time":"2025-12-18T16:36:11.081747+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"POST","uri":"/api/property/products/generate-templates/selected","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":17551958,"latency_human":"17.551958ms","bytes_in":56,"bytes_out":76}
+DEBUG GetAll: Product ID=26, Code=PR-DAMAI-PAR-SME-01, AdminFee=50000
+{"time":"2025-12-18T16:36:11.086757+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/products?insurance_code=DAMAI","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":762041,"latency_human":"762.041µs","bytes_in":0,"bytes_out":700}
+{"time":"2025-12-18T16:36:11.091137+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/templates/draft?insurance_code=DAMAI","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":951041,"latency_human":"951.041µs","bytes_in":0,"bytes_out":477}
+DEBUG GetAll: Product ID=26, Code=PR-DAMAI-PAR-SME-01, AdminFee=50000
+{"time":"2025-12-18T16:37:36.954043+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/products?insurance_code=DAMAI","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":2116344917,"latency_human":"2.116344917s","bytes_in":0,"bytes_out":700}
+DEBUG GetAll: Product ID=26, Code=PR-DAMAI-PAR-SME-01, AdminFee=50000
+{"time":"2025-12-18T16:37:54.639994+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/products?insurance_code=DAMAI","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":365255209,"latency_human":"365.255209ms","bytes_in":0,"bytes_out":700}
+DEBUG GetAll: Product ID=26, Code=PR-DAMAI-PAR-SME-01, AdminFee=50000
+{"time":"2025-12-18T16:38:34.827376+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/products?insurance_code=DAMAI","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":2962302750,"latency_human":"2.96230275s","bytes_in":0,"bytes_out":700}
+✅ GetAll Property insurances: Found 1 insurances
+✅ GetAll Property insurances: Found 1 insurances
+{"time":"2025-12-18T16:40:37.07608+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/insurances","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":1186164042,"latency_human":"1.186164042s","bytes_in":0,"bytes_out":204}
+{"time":"2025-12-18T16:40:37.07608+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/insurances","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":1186102750,"latency_human":"1.18610275s","bytes_in":0,"bytes_out":204}
+DEBUG GetAll: Product ID=26, Code=PR-DAMAI-PAR-SME-01, AdminFee=50000
+{"time":"2025-12-18T16:40:37.111482+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/products","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":1221706750,"latency_human":"1.22170675s","bytes_in":0,"bytes_out":700}
+DEBUG GetAll: Product ID=26, Code=PR-DAMAI-PAR-SME-01, AdminFee=50000
+{"time":"2025-12-18T16:40:37.123019+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/products","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":1233231209,"latency_human":"1.233231209s","bytes_in":0,"bytes_out":700}
+DEBUG GetAll: Product ID=26, Code=PR-DAMAI-PAR-SME-01, AdminFee=50000
+{"time":"2025-12-18T16:40:39.170711+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/products?insurance_code=DAMAI","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":216987875,"latency_human":"216.987875ms","bytes_in":0,"bytes_out":700}
+DEBUG GetAll: Product ID=26, Code=PR-DAMAI-PAR-SME-01, AdminFee=50000
+{"time":"2025-12-18T16:40:39.272653+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/products?insurance_code=DAMAI","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":97784209,"latency_human":"97.784209ms","bytes_in":0,"bytes_out":700}
+DEBUG GetAll: Product ID=26, Code=PR-DAMAI-PAR-SME-01, AdminFee=50000
+{"time":"2025-12-18T16:40:43.264745+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/products?insurance_code=DAMAI","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":52994417,"latency_human":"52.994417ms","bytes_in":0,"bytes_out":700}
+{"time":"2025-12-18T16:40:43.657417+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/templates/draft?insurance_code=DAMAI","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":380716083,"latency_human":"380.716083ms","bytes_in":0,"bytes_out":477}
+✅ GetAll Property insurances: Found 1 insurances
+DEBUG GetAll: Product ID=26, Code=PR-DAMAI-PAR-SME-01, AdminFee=50000
+{"time":"2025-12-18T17:14:26.485833+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/products","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":7803550083,"latency_human":"7.803550083s","bytes_in":0,"bytes_out":700}
+{"time":"2025-12-18T17:14:26.49401+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/insurances","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":7800483417,"latency_human":"7.800483417s","bytes_in":0,"bytes_out":204}
+DEBUG GetAll: Product ID=26, Code=PR-DAMAI-PAR-SME-01, AdminFee=50000
+{"time":"2025-12-18T17:14:27.60124+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/products","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":690209083,"latency_human":"690.209083ms","bytes_in":0,"bytes_out":700}
+✅ GetAll Property insurances: Found 1 insurances
+{"time":"2025-12-18T17:14:27.652782+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/insurances","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":742237583,"latency_human":"742.237583ms","bytes_in":0,"bytes_out":204}
+✅ GetAll Property insurances: Found 1 insurances
+{"time":"2025-12-18T17:15:42.118701+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/insurances","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":132186417,"latency_human":"132.186417ms","bytes_in":0,"bytes_out":204}
+DEBUG GetAll: Product ID=26, Code=PR-DAMAI-PAR-SME-01, AdminFee=50000
+{"time":"2025-12-18T17:15:42.119283+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/products","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":132787917,"latency_human":"132.787917ms","bytes_in":0,"bytes_out":700}
+✅ GetAll Property insurances: Found 1 insurances
+{"time":"2025-12-18T17:15:42.124789+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/insurances","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":5606959,"latency_human":"5.606959ms","bytes_in":0,"bytes_out":204}
+DEBUG GetAll: Product ID=26, Code=PR-DAMAI-PAR-SME-01, AdminFee=50000
+{"time":"2025-12-18T17:15:42.125124+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/products","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":5386167,"latency_human":"5.386167ms","bytes_in":0,"bytes_out":700}
+✅ GetAll Property insurances: Found 1 insurances
+{"time":"2025-12-18T17:48:28.343488+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/insurances","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":533976500,"latency_human":"533.9765ms","bytes_in":0,"bytes_out":204}
+DEBUG GetAll: Product ID=26, Code=PR-DAMAI-PAR-SME-01, AdminFee=50000
+{"time":"2025-12-18T17:48:28.344693+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/products","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":535885375,"latency_human":"535.885375ms","bytes_in":0,"bytes_out":700}
+✅ GetAll Property insurances: Found 1 insurances
+{"time":"2025-12-18T17:48:28.365421+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/insurances","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":20518041,"latency_human":"20.518041ms","bytes_in":0,"bytes_out":204}
+DEBUG GetAll: Product ID=26, Code=PR-DAMAI-PAR-SME-01, AdminFee=50000
+{"time":"2025-12-18T17:48:28.425518+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/products","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":77351959,"latency_human":"77.351959ms","bytes_in":0,"bytes_out":700}
+✅ GetAll Property insurances: Found 1 insurances
+DEBUG GetAll: Product ID=26, Code=PR-DAMAI-PAR-SME-01, AdminFee=50000
+{"time":"2025-12-18T18:20:42.051618+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/products","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":131329584,"latency_human":"131.329584ms","bytes_in":0,"bytes_out":700}
+{"time":"2025-12-18T18:20:42.051624+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/insurances","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":131330542,"latency_human":"131.330542ms","bytes_in":0,"bytes_out":204}
+✅ GetAll Property insurances: Found 1 insurances
+{"time":"2025-12-18T18:20:42.064722+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/insurances","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":10865958,"latency_human":"10.865958ms","bytes_in":0,"bytes_out":204}
+DEBUG GetAll: Product ID=26, Code=PR-DAMAI-PAR-SME-01, AdminFee=50000
+{"time":"2025-12-18T18:20:42.065526+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/products","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":11617084,"latency_human":"11.617084ms","bytes_in":0,"bytes_out":700}
+DEBUG GetAll: Product ID=26, Code=PR-DAMAI-PAR-SME-01, AdminFee=50000
+✅ GetAll Property insurances: Found 1 insurances
+{"time":"2025-12-18T20:31:01.664969+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/products","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":240155917,"latency_human":"240.155917ms","bytes_in":0,"bytes_out":700}
+{"time":"2025-12-18T20:31:01.664973+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/insurances","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":240154458,"latency_human":"240.154458ms","bytes_in":0,"bytes_out":204}
+✅ GetAll Property insurances: Found 1 insurances
+{"time":"2025-12-18T20:31:01.673402+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/insurances","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":5974291,"latency_human":"5.974291ms","bytes_in":0,"bytes_out":204}
+DEBUG GetAll: Product ID=26, Code=PR-DAMAI-PAR-SME-01, AdminFee=50000
+{"time":"2025-12-18T20:31:01.676015+07:00","id":"","remote_ip":"::1","host":"localhost:8080","method":"GET","uri":"/api/property/products","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","status":200,"error":"","latency":7798542,"latency_human":"7.798542ms","bytes_in":0,"bytes_out":700}
