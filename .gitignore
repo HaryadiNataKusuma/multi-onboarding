@@ -1,0 +1,41 @@
+# Frontend directories (exclude from backend repo)
+frontend-property/
+frontend-travel/
+
+# Logs
+*.log
+backend.log
+frontend-*.log
+server.log
+
+# Binaries
+main
+multi-onboarding
+travel-onboarding
+
+# Dependencies
+node_modules/
+vendor/
+
+# Build
+dist/
+build/
+
+# Environment
+.env
+.env.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# SQL files (optional - uncomment if you don't want to commit SQL)
+# *.sql
+
